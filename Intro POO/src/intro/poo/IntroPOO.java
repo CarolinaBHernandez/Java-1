@@ -16,8 +16,8 @@ public class IntroPOO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Persona directora = new Persona ("Carolina", 37102684, "Hernandez");
-        Persona alumno = new Persona ("Marisa", 31473701, "Hernandez");
+        Persona directora = new Persona ("Carolina", 37102250, "Hernandez");
+        Persona alumno = new Persona ("Marisa", 31473852, "Hernandez");
         System.out.print(directora.getNombre() + " ");
         System.out.println(directora.getApellido());
         System.out.println(" ");
