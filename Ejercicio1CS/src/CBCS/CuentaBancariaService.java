@@ -46,10 +46,10 @@ public class CuentaBancariaService {
         if (Saldoactual > retiro) {
             Saldoactual = Saldoactual - retiro;
             Cuenta.setSaldoActual(Saldoactual);
-            System.out.println("Su nuevo monto es: " + Cuenta.getSaldoActual());
+            System.out.println("Su nuevo monto es $: " + Cuenta.getSaldoActual());
 
         } else {
-            System.out.println("Saldo insuficiente, retira " + Saldoactual + " $");
+            System.out.println("Saldo insuficiente, retira $" + Saldoactual );
             Saldoactual = 0;
             Cuenta.setSaldoActual(Saldoactual);
         }
@@ -59,19 +59,19 @@ public class CuentaBancariaService {
         double Saldoactual = Cuenta.getSaldoActual();
         double retiro = Saldoactual * 0.2;
         Saldoactual = Saldoactual - retiro;
-        System.out.println("Por extracciÃ³n rapida, procederÃ¡ a retirar un importe de " + retiro + " $");
-        System.out.println("Su saldo actual es " + Saldoactual + " $");
+        System.out.println("Por extracción rapida, procederá a retirar un importe de $ " + retiro );
+        System.out.println("Su saldo actual es $ " + Saldoactual );
         Cuenta.setSaldoActual(Saldoactual);
 
     }
 
     public void consultarSaldo(CuentaBancaria Cuenta) {
-        System.out.println("Su saldo actual es " + Cuenta.getSaldoActual());
+        System.out.println("Su saldo actual es $" + Cuenta.getSaldoActual());
 
     }
 
     public void consultarDatos(CuentaBancaria Cuenta) {
-        System.out.println("Su DNI es " + Cuenta.getDniCliente() + "\n Su nÃºmero de cuenta es  " + Cuenta.getNumeroCuenta() + "\n Su saldo actual es de " + Cuenta.getSaldoActual() + " $");
+        System.out.println("Su DNI es " + Cuenta.getDniCliente() + "\n Su número de cuenta es  " + Cuenta.getNumeroCuenta() + "\n Su saldo actual es de $" + Cuenta.getSaldoActual() );
 
     }
 

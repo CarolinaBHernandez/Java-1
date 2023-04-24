@@ -47,8 +47,8 @@ public class ClaseDate {
         System.out.println("------------------------------------------------------");
         System.out.println("Getters: ");
         System.out.println("El dia de la fecha actual es: " + fechaActual.getDate()
-                + "el mes de la fecha actual es: " + fechaActual.getMonth()
-                + "el año de la fecha actual es: " + fechaActual.getYear());
+                + "\n El mes de la fecha actual es: " + fechaActual.getMonth()
+                + "\n El año de la fecha actual es: " + (fechaActual.getYear()+1900));
 
         System.out.println("La fecha es: " + fechaActual.getTime());
         
