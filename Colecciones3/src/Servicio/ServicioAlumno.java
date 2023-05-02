@@ -56,9 +56,9 @@ final y se lo busca en la lista de Alumnos. Si está en la lista, se llama al m�
 del método se usará la lista notas para calcular el promedio final de alumno. Siendo este
 promedio final, devuelto por el método y mostrado en el main.*/
     
-    public double notaFinal(String nombreAlumno) {
+    public double notaFinal(String nombre) {
     for (Alumno alumno : listaAlumnos) {
-        if (alumno.getNombre().equalsIgnoreCase(nombreAlumno)) {
+        if (alumno.getNombre().equalsIgnoreCase(nombre)) {
             ArrayList<Integer> notas = alumno.getNotas();
             int suma = 0;
             for (int nota : notas) {
@@ -68,7 +68,7 @@ promedio final, devuelto por el método y mostrado en el main.*/
             return promedio;
         }
     }
-    System.out.println("El/La alumno/a " + nombreAlumno + " no se encuentra en la lista.");
+    System.out.println("El/La alumno/a " + nombre + " no se encuentra en la lista.");
     return -1; // Se devuelve -1 como indicador de error
     
 }
