@@ -106,6 +106,26 @@ crear otra Pelicula o no.*/
         }
     });
 }*/
+    
+     //Ordenar las películas de acuerdo a su duración (de menor a mayor) y mostrarlo en
+//pantalla.
+public void menorMayor() {
+        System.out.println("--------- PELICULAS ORDENADAS DE MENOR A MAYOR ---------");
+        Collections.sort(peliculas, Comparator.comparing(Pelicula::getDuracion));
+        peliculas.stream().map((pelicula) -> {
+            System.out.println("Título: " + pelicula.getTitulo());
+            return pelicula;
+        }).map((pelicula) -> {
+            System.out.println("Director: " + pelicula.getDirector());
+            return pelicula;
+        }).map((pelicula) -> {
+            System.out.println("Duración: " + pelicula.getDuracion() + " horas");
+            return pelicula;
+        }).forEachOrdered((_item) -> {
+            System.out.println();
+        });
+    }
+
 
     //Ordenar las películas por título, alfabéticamente y mostrarlo en pantalla.
     public void ordenarTitulo() {
