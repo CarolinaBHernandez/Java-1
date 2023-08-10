@@ -21,37 +21,56 @@ public class Ejercicio3CS {
      * @param args the command line arguments
      */
    public static void main(String[] args) {
-    PersonaServicio personaServicio = new PersonaServicio();
-    
-    Persona persona1 = new Persona();
-    personaServicio.crearPersona(persona1);
-    
-    Persona persona2 = new Persona();
-    personaServicio.crearPersona(persona2);
-    
-    Persona persona3 = new Persona();
-    personaServicio.crearPersona(persona3);
-    
-    Persona persona4 = new Persona();
-    personaServicio.crearPersona(persona4);
-    
-    System.out.println("Persona 1:");
-    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona1));
-    System.out.println("IMC: " + personaServicio.calcularIMC(persona1));
-    
-    System.out.println("Persona 2:");
-    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona2));
-    System.out.println("IMC: " + personaServicio.calcularIMC(persona2));
-    
-    System.out.println("Persona 3:");
-    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona3));
-    System.out.println("IMC: " + personaServicio.calcularIMC(persona3));
-    
-    System.out.println("Persona 4:");
-    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona4));
-    System.out.println("IMC: " + personaServicio.calcularIMC(persona4));
+       
+       /* EJ 1 (Manejo de excepciones) Inicializar un objeto de la clase Persona ejercicio 7 de la guía POO, a null y tratar de invocar el
+método esMayorDeEdad() a través de ese objeto. Luego, englobe el código con una cláusula
+try-catch para probar la nueva excepción que debe ser controlada.*/
+       
+          try {
+        Persona persona = null; // Inicializar el objeto como null
+        PersonaServicio personaServicio = new PersonaServicio();
+        
+        // Intentar invocar el método esMayorDeEdad()
+        boolean esMayor = personaServicio.esMayorDeEdad(persona);
+        
+        System.out.println("Es mayor de edad: " + esMayor);
+    } catch (NullPointerException e) {
+        System.out.println("Excepción capturada: " + e.getMessage());
+        // Aquí puedes manejar la excepción de acuerdo a tus necesidades
+    }
 }
+   }
+//    PersonaServicio personaServicio = new PersonaServicio();
+//    
+//    Persona persona1 = new Persona();
+//    personaServicio.crearPersona(persona1);
+//    
+//    Persona persona2 = new Persona();
+//    personaServicio.crearPersona(persona2);
+//    
+//    Persona persona3 = new Persona();
+//    personaServicio.crearPersona(persona3);
+//    
+//    Persona persona4 = new Persona();
+//    personaServicio.crearPersona(persona4);
+//    
+//    System.out.println("Persona 1:");
+//    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona1));
+//    System.out.println("IMC: " + personaServicio.calcularIMC(persona1));
+//    
+//    System.out.println("Persona 2:");
+//    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona2));
+//    System.out.println("IMC: " + personaServicio.calcularIMC(persona2));
+//    
+//    System.out.println("Persona 3:");
+//    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona3));
+//    System.out.println("IMC: " + personaServicio.calcularIMC(persona3));
+//    
+//    System.out.println("Persona 4:");
+//    System.out.println("Es mayor de edad: " + personaServicio.esMayorDeEdad(persona4));
+//    System.out.println("IMC: " + personaServicio.calcularIMC(persona4));
+//}
         
 
         
-    }
+   // }
